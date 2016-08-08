@@ -5,6 +5,7 @@
     <title>register</title>
 </head>
 <body>
+
     <div>
         <header>
             <h1>Register</h1>
@@ -12,19 +13,24 @@
     </div>
         <div>
             <form>
-                Name
+                Your Image:
+                <input type="file" >
+                <br>
+                Preview Image:
+                <br>
+                Name:
                 <input type="text" placeholder="Mollee">
                 <br>
-                Gender
-                <input type="radio">
+                Gender:
+                <input type="radio"> Male <input type="radio"> Female <input type="radio"> Other
                 <br>
-                Age
+                Age:
                 <input type="number" placeholder="21">
                 <br>
-                Birthday
+                Birthday:
                 <input type="date" placeholder="dd/mm/yyyy">
                 <br>
-                Country
+                Country:
                 <select>
                     <option>Canada</option>
                     <option>Ireland</option>
@@ -33,22 +39,24 @@
                     <option>New Zealand</option>
                     <option>United States</option>
                 </select>
-                Favorite Color
+                Favorite Color:
                 <input type="color">
                 <br>
-                Height
-                <input type="range">
+                Height:
+                Short <input type="range" min="short" max="tall"> Tall
                 <br>
-                Income
-                <input type="range">
+                Income:
+                Poor<input type="range" min="poor" max="rich">Rich
                 <br>
-                Email
+                Email:
                 <input type="email">
-                Cell Number
+                <br>
+                Cell Number:
                 <input type="text" placeholder="(000)000-0000">
                 <br>
-                Address
+                Address:
                 <input type="text" placeholder="00000 w Santa Ln.">
+                <br>
                 <button type="submit" >Submit</button>
             </form>
         </div>
