@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>register</title>
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 </head>
 <body>
 <style>
+    .questions{
+        border: 5px solid black;
+        width: 720px;
+        margin:10px;
+        padding: 10px;
+
+    }
     .enjoy-css {
         display: inline-block;
         -webkit-box-sizing: content-box;
@@ -13,7 +23,7 @@
         box-sizing: content-box;
         padding: 10px 20px;
         border: 1px solid #b7b7b7;
-        margin: 8px;
+        margin: 5px;
         -webkit-border-radius: 3px;
         border-radius: 3px;
         font: normal 16px/normal "Times New Roman", Times, serif;
@@ -29,7 +39,13 @@
         -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
         transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     }
+
+    body{
+        background-color: #00a2a2;
+    }
 </style>
+
+
 <div>
     <header>
         <h1>Register</h1>
@@ -37,25 +53,29 @@
 </div>
 <div>
     <form>
-        Your Image:
-        <input type="file" >
+        <div class="questions">
+        <label for="avatar">Your Image:</label>
+        <input type="file"  onchange="readURL(this)" required>
         <br>
-        Preview Image:
+        <label >Preview Image:</label>
+            <img id=avatar src="#">
+        </div>
+        <div class="questions">
         <br>
-        Name:
+        <label>Name:</label>
         <input type="text" placeholder="Mollee" class="enjoy-css">
         <br>
-        Gender:
-        <input type="radio" class="enjoy-css"> Male <input type="radio" class="enjoy-css"> Female <input type="radio" class="enjoy-css"> Other
+        <label for="gender">Gender:</label>
+        <input type="radio" class="enjoy-css" id="gender"> Male <input type="radio" class="enjoy-css"> Female <input type="radio" class="enjoy-css"> Other
         <br>
-        Age:
+        <label>Age:</label>
         <input type="number" placeholder="21" class="enjoy-css">
         <br>
-        Birthday:
+        <label>Birthday:</label>
         <input type="date" placeholder="dd/mm/yyyy" class="enjoy-css">
         <br>
-        Country:
-        <select class="enjoy-css">
+        <label for="country">Country:</label>
+        <select class="enjoy-css" id="country">
             <option>Canada</option>
             <option>Ireland</option>
             <option>Japan</option>
@@ -64,23 +84,31 @@
             <option>United States</option>
         </select>
         <br>
-        Favorite Color:
-        <input type="color" class="enjoy-css">
+        <label for="color">Favorite Color:</label>
+        <input type="color" class="enjoy-css" id="color">
+            </div>
+        <div class="questions">
         <br>
-        Height:
-        Short <input type="range" min="short" max="tall"> Tall
+        <label for="height">Height:</label>
+        Short <input type="range" min="short" max="tall" id="height"> Tall
         <br>
-        Income:
-        Poor<input type="range" min="poor" max="rich">Rich
+        <label for="income">Income:</label>
+        Poor<input type="range" min="poor" max="rich" id="income">Rich
+            </div>
+        <div class="questions">
         <br>
-        Email:
-        <input type="email" class="enjoy-css">
+        <label for="email">Email:</label>
+        <input type="email" class="enjoy-css" id="email">
         <br>
-        Cell Number:
-        <input type="text" placeholder="(000)000-0000" class="enjoy-css">
+        <label>Cell Phone</label>
+        <input type="tel" placeholder="(000)000-0000" class="enjoy-css">
         <br>
-        Address:
-        <input type="text" placeholder="00000 w Santa Ln." class="enjoy-css">
+        <label for="address">Address</label>
+           <br>
+        <textarea placeholder="00000 w Santa Ln." class="enjoy-css" id="address"></textarea>
+            <br>
+            <label for="contact">Method to contact you:</label> <input type="checkbox" id="contact">Email <input type="checkbox" id="contact">Cell phone <input type="checkbox" id="contact">Address
+        </div>
         <br>
         <button type="submit" >Submit</button>
     </form>
